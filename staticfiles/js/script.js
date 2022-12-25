@@ -25,7 +25,7 @@ $('.menu-btn').click(function(){
 });
 // typing animation script
 var typed=new Typed(".typing",{
-  strings: ["Java Web Developer","Designer","Freelancer"],
+  strings: ["Python Web Developer","Api developer","Freelancer"],
   typeSpeed: 100,
   backspeed: 60,
   loop: true
@@ -33,7 +33,7 @@ var typed=new Typed(".typing",{
 
 });
 var typed=new Typed(".typingabout",{
-  strings: ["Java Web Developer","Designer","Freelancer"],
+  strings: ["Python Web Developer","Api developer","Freelancer"],
   typeSpeed: 100,
   backspeed: 60,
   loop: true

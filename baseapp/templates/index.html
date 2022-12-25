@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css" >
+    <link rel="stylesheet" href="{% static './css/style.css' %}" >
     
-    <title>Kelcode Portfolio Website</title>
-    <link rel="stylesheet" href="./css/carousel.min.css">
+    <title>Kelcode Portfolio</title>
+    <link rel="stylesheet" href="{% static './css/carousel.min.css' %}">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
                 <li><a href="#skills" class="menu-btn">Skills</a> </li>
                 <li><a href="#teams"
                     class="menu-btn">Teams</a> </li>
-                <li><a href="#footer" class="menu-btn">Contact</a> </li>
+                <li><a href="#contact" class="menu-btn">Contact</a> </li>
 
             </ul>
             <div class="menu-btn">
@@ -61,7 +61,7 @@
                        I'm Christian Kelechi Eze and I'm a <span class="typingabout"></span>
                    </div>
                    <p>I specialize in implementation of web applications with java technologies such as Spring Boot  and Destop app technlology such as JavaFx</p>
-                   <a href="./pdfs/EZECHRISTIANPROGRAMMINGSKILLRESUME.pdf" download="EzeChristianResume">Download CV</a>
+                   <a href="{% static './pdfs/EZECHRISTIANPROGRAMMINGSKILLRESUME.pdf' %}" download="EzeChristianResume">Download CV</a>
                </div>
             </div>
         </div>
@@ -152,61 +152,49 @@
               <a href="#">Read More</a>
           </div> 
           <div class="column right">
-              <div class="bars">
-                  <div class="info">
-<span>HTML</span>
-<span>90%</span>
-                  </div>
-                  <div class="line html">
-
-                  </div>
-              </div>
-            <div class="bars">
-                <div class="info">
-                    <span>CSS</span>
-                    <span>70%</span>
-                </div>
-                <div class="line css">
-                
-                </div>
-            </div>
-            <div class="bars">
-                <div class="info">
-                    <span>JavaScript</span>
-                    <span>90%</span>
-                </div>
-                <div class="line javascript">
-                
-                </div>
-            </div>
-            <div class="bars">
-                <div class="info">
-                    <span>MySQL</span>
-                    <span>80%</span>
-                </div>
-                <div class="line mysql">
-                
-                </div>
-            </div>
-            <div class="bars">
-                <div class="info">
-                    <span>Java</span>
-                    <span>90%</span>
-                </div>
-                <div class="line java">
-                
-                </div>
-            </div>
-            <div class="bars">
-                <div class="info">
-                    <span>JavaFx</span>
-                    <span>85%</span>
-                    
-                </div>
-                <div class="line javafx"></div>
-            </div>
+             <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>Django</li>
+                <li>MySQL</li>
+             </ul> 
           </div> 
         </div>
+    </div>
+</section>
+
+<section class="projects" id="projects">
+
+    <div class="max-width">
+        <h2 class="title">My Projects</h2>
+        <div class="carousel owl-carousel">
+        <div class="card">
+            <div class="box">
+                <img src="{% static './images/codeblazehomepage.PNG' %}" alt="">
+                <div class="text">Codeblaze Academy </div>
+               
+               
+                <p>Currently Play the role of designing the backend structures of the website and also in maintaining and database administration of the website </p> 
+           
+            </div>
+        
+        </div>
+        <div class="card">
+            <div class="box">
+                <img src="{% static './images/codeblazeregistrationpage.PNG' %}" alt="">
+                <div class="text">Codeblaze Academy </div>
+               
+               
+                <p>Currently Play the role of designing the backend structures of the website and also in maintaining and database administration of the website </p> 
+           
+            </div>
+        
+        </div>
+
+    </div>
     </div>
 </section>
 <!-- teams section start -->
@@ -217,7 +205,7 @@
         <div class="carousel owl-carousel">
             <div class="card">
                 <div class="box">
-<img src="./images/soli.jpg" alt="" style="width:150px ;height:150px">
+<img src="{% static './images/soli.jpg' %}" alt="" style="width:150px ;height:150px">
 <div class="text">Joboson Solomon</div>
 <small>Contact No: 09017912839</small>
 <p>Joboson Solomon is a Full stack Web Developer experienced in front end and back end languages</p>
@@ -235,7 +223,7 @@
             </div> -->
             <div class="card">
                 <div class="box">
-                    <img src="{% static '/images/chesky.jpg' %}" alt="" style="width:150px ;height:150px">
+                    <img src="{% static './images/chesky.jpg' %}" alt="" style="width:150px ;height:150px">
                     <div class="text">Okoh Uchenna Kingsley</div>
                     <small>Contact No: 08106048085</small>
                     <p>I am a Web developer/ Mobile developer experienced in core w3c technologies such as html,css,javascript and cross platform mobile technology Flutter</p>
@@ -311,18 +299,18 @@
       <!-- footer section start
      -->
      <footer id="footer">
-         <span>Created By <a href="#">CodeBlaze Co Owner</a>| <span class="far fa-copyright">
+         <span>Created By <a href="#">CodeBlaze Co Founder</a>| <span class="far fa-copyright">
 
          </span> 2022 All rights reserved</span>
      </footer>
-<script src="./js/jq.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/fontawesome.min.js"></script>
-    <script src="./js/waypoint.min.js"></script>
-    <script src="./js/owlcarousel.min.js"></script>
-    <script src="./js/mytyped.min.js"></script>
+<script src="{% static './js/jq.js' %}"></script>
+    <script src="{% static './js/script.js' %}"></script>
+    <script src="{% static './js/fontawesome.min.js' %}"></script>
+    <script src="{% static './js/waypoint.min.js' %}"></script>
+    <script src="{% static './js/owlcarousel.min.js' %}"></script>
+    <script src="{% static './js/mytyped.min.js' %}"></script>
     
 </body>
-
+<!-- https://christiankelechi.github.io/kelcodeportfolio/ -->
 </html>
 <!-- stopped at 1:32:00  of portfolio -->

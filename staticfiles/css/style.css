@@ -574,6 +574,48 @@ footer span a:hover{
 }
 
 
+.projects .carousel .card{
+    background: crimson;
+    border-radius: 6px;
+    color:white;
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+    }
+    .projects .carousel .card{
+        height: 80vh;
+        width: 80vw;
+        object-fit: cover;
+        /* border-radius: 50%; */
+        transition: all 0.3s ease;
+        
+    }
+   
+    .projects .carousel .card img{
+        /* margin: 4rem; */
+        height: 60vh;
+    }
+    .teams .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    }
+    /* .projects .carousel .card .box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    } */
+    .projects .carousel .card:hover{
+        /* background: crimson; */
+    }
+    .projects .carousel .card:hover .box{
+        transform: scale(1.05);
+    }
+    .projects .carousel .card:hover{
+    border-color: #fff;
+    }
 
 
 @media(max-width:1300px) {
@@ -715,3 +757,5 @@ width: 100%;
         font-size: 27px;
     }
 }
+
+
