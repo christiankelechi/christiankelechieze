@@ -15,7 +15,7 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+import dj_database_url
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-d7#pz+3u*&=l7l%jk(=fa)m%rmo^u)*m-6+padg3-#c&nwwsz9
 # production mode
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost','christiankelechieze.com','www.christiankelechieze.com','74.208.95.231']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -94,17 +94,20 @@ WSGI_APPLICATION = 'christiankelechieze.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'christiankelechiezedb',
-        'USER':'christiankelechiezeuser',
-        'PASSWORD':'Kelechi1999!',
-        'PORT':'',
-        'HOST':'localhost'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'christiankelechiezedb',
+#         'USER':'christiankelechiezeuser',
+#         'PASSWORD':'Kelechi1999!',
+#         'PORT':'',
+#         'HOST':'localhost'
+#     }
+# }
 
+DATABASES = {
+    'default': dj_database_url.parse("postgres://kc:9IXtEnH4naXUEwG7QBGC8d4jdbewTV5y@dpg-cht1bc0rddlc2mfhkreg-a.oregon-postgres.render.com/christiankelechiezedb")
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
